@@ -12,7 +12,7 @@ def get_requirements_tests():
         return f.readlines()
 
 setup(
-    name='django-storages',
+    name='django-storages-internal',
     version=storages.__version__,
     packages=['storages', 'storages.backends'],
     author='Josh Schneier',
