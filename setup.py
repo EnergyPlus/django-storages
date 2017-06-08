@@ -11,9 +11,15 @@ def get_requirements_tests():
     with open('requirements-tests.txt') as f:
         return f.readlines()
 
+# internal pypi name and version we can reference with pip
+# This should match (using pip and pypi.nrpgl.us), the patched code
+# Ethan & Aaron fixed in september 2016, but without the github egg
+# install
+
+# Yes, Virginia, this is hack upon a hack...
 setup(
-    name='django-storages',
-    version=storages.__version__,
+    name='django-storages-ep',
+    version='1.5.1',
     packages=['storages', 'storages.backends'],
     author='Josh Schneier',
     author_email='josh.schneier@gmail.com',
